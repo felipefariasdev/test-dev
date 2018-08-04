@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => 'web', 'prefix' => 'carros', 'namespace' => 'Modules\Carros\Http\Controllers'], function()
+Route::group(['middleware' => 'api', 'prefix' => 'api', 'namespace' => 'Modules\Carros\Http\Controllers'], function()
 {
-    Route::get('/', 'CarrosController@index');
+    Route::resource('carros', 'CarrosController');
 });
