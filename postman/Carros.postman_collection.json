@@ -1,0 +1,202 @@
+{
+	"id": "3b96afeb-dfd5-d6ad-c9e5-e7195bcce3c0",
+	"name": "Carros",
+	"description": "",
+	"order": [
+		"d250de90-6d38-6789-94b7-c008ab8ee925",
+		"af95f8e9-0bb6-cb5e-d1b2-f08f4d50563a",
+		"faab7670-fcac-e492-1c2c-b310474d3980",
+		"bd0f86ed-a610-82ce-e8ba-35140700d679",
+		"3aa14af9-66f1-f9bb-0572-fc4b935e4e1b",
+		"280445b8-c3c6-6750-c6bd-1c644d3a4c25"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1533366205979,
+	"owner": "72492",
+	"public": false,
+	"requests": [
+		{
+			"id": "280445b8-c3c6-6750-c6bd-1c644d3a4c25",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/carros/3",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1533370032839,
+			"name": "put",
+			"description": "",
+			"collectionId": "3b96afeb-dfd5-d6ad-c9e5-e7195bcce3c0",
+			"responses": [],
+			"rawModeData": "{\r\n  \"marca\":\"marca3 alterado\",\r\n  \"modelo\":\"modelo3\",\r\n  \"ano\":\"2018\"\r\n}"
+		},
+		{
+			"id": "3aa14af9-66f1-f9bb-0572-fc4b935e4e1b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/carros",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "3b96afeb-dfd5-d6ad-c9e5-e7195bcce3c0",
+			"data": [],
+			"dataMode": "raw",
+			"name": "index",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1533366528737,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n  \r\n  \"nm_nome_turma\":\"turma2\",\r\n  \"cd_tb_situacao_turma\":\"1\",\r\n  \"cursos_id\":\"1\"\r\n}"
+		},
+		{
+			"id": "af95f8e9-0bb6-cb5e-d1b2-f08f4d50563a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/carros/2",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1533368668076,
+			"name": "put",
+			"description": "",
+			"collectionId": "3b96afeb-dfd5-d6ad-c9e5-e7195bcce3c0",
+			"responses": [],
+			"rawModeData": "{\r\n  \"marca\":\"marca2 mod\",\r\n  \"modelo\":\"modelo2\",\r\n  \"ano\":\"2018\"\r\n}"
+		},
+		{
+			"id": "bd0f86ed-a610-82ce-e8ba-35140700d679",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/carros/3",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1533370006621,
+			"name": "show",
+			"description": "",
+			"collectionId": "3b96afeb-dfd5-d6ad-c9e5-e7195bcce3c0",
+			"responses": [],
+			"rawModeData": "{\r\n  \r\n  \"nm_nome_turma\":\"turma2\",\r\n  \"cd_tb_situacao_turma\":\"1\",\r\n  \"cursos_id\":\"1\"\r\n}"
+		},
+		{
+			"id": "d250de90-6d38-6789-94b7-c008ab8ee925",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/carros",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": "",
+			"method": "POST",
+			"collectionId": "3b96afeb-dfd5-d6ad-c9e5-e7195bcce3c0",
+			"data": [],
+			"dataMode": "raw",
+			"name": "store",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1533366302552,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n  \"marca\":\"marca1\",\r\n  \"modelo\":\"modelo1\",\r\n  \"ano\":\"2018\"\r\n}"
+		},
+		{
+			"id": "faab7670-fcac-e492-1c2c-b310474d3980",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/carros/2",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1533369989822,
+			"name": "delete",
+			"description": "",
+			"collectionId": "3b96afeb-dfd5-d6ad-c9e5-e7195bcce3c0",
+			"responses": [],
+			"rawModeData": ""
+		}
+	]
+}
