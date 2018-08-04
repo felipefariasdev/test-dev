@@ -3,70 +3,71 @@
 namespace Modules\Carros\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Modules\Carros\Entities\Carros;
 
 class CarrosController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     * @return Response
+     * Lista todos modelos encontrados
+     * @return JsonResponse com o corpo da resposta e um http status code.
      */
     public function index()
     {
-        return view('carros::index');
+        $obj = new Carros();
+        return new JsonResponse($obj->all());
     }
 
     /**
-     * Show the form for creating a new resource.
-     * @return Response
-     */
-    public function create()
-    {
-        return view('carros::create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     * @param  Request $request
-     * @return Response
+     * Salva um modelo na base de dados
+     * @param  Request  $request Parametros da requisição
+     * @return JsonResponse
      */
     public function store(Request $request)
     {
+
+        $obj = new Carros($request->all());
+        return new JsonResponse($obj->save(),200);
     }
 
     /**
-     * Show the specified resource.
-     * @return Response
+     * Atualiza um modelo da base de dados
+     * @param  Request  $request Parametros da requisição
+     * @return JsonResponse
      */
-    public function show()
+    public function update(Request $request,$id)
     {
-        return view('carros::show');
+
+        $obj = Carros::findOrFail($id);
+        return new JsonResponse($obj->update($request->all()),200);
     }
 
     /**
-     * Show the form for editing the specified resource.
-     * @return Response
+     * Busca um modelo da base de dados pela sua chave primária
+     * @param  int $id chave primária do modelo
+     * @return JsonResponse
      */
-    public function edit()
+    public function show(Request $request, $id)
     {
-        return view('carros::edit');
+        $obj = new Carros();
+        return new JsonResponse($obj->find($id));
     }
 
     /**
-     * Update the specified resource in storage.
-     * @param  Request $request
-     * @return Response
+     * Apaga um modelo da base de dados pela sua chave primária
+     * @param  int $id chave primária do modelo
+     * @return JsonResponse
      */
-    public function update(Request $request)
+    public function destroy($id)
     {
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @return Response
-     */
-    public function destroy()
-    {
+        try{
+            $obj = Carros::findOrFail($id);
+            Carros::destroy($id);
+            return new JsonResponse(true, 204);
+        }catch(ModelNotFoundException $e){
+            return new JsonResponse('Registro '.$id.' inexistente!',400);
+        }
     }
 }
