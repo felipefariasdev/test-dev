@@ -1,0 +1,10 @@
+.idea
+.env
+vendor
+nbproject
+.buildpath
+.project
+.settings/org.eclipse.wst.validation.prefs
+*.jasper
+Modules/Cadastros/Reports/*.pdf
+Modules/Cadastros/Reports/*.rtf
