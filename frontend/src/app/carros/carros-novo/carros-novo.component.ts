@@ -16,14 +16,14 @@ export class CarrosNovoComponent implements OnInit {
 
     onSubmit() {
 
-        this.carrosService.salvar();
-
-        console.log('foi');
-
         this.submitted = true;
         if (this.addForm.invalid) {
             return;
         }
+
+        this.carrosService.salvar();
+
+        console.log('foi');
 
         console.log('marca: ' + this.addForm.controls.marca.value);
         console.log('modelo: ' + this.addForm.controls.modelo.value);

@@ -1,32 +1,26 @@
 <h1>Carros / Novo</h1>
 <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
-<div class="addForm-group row">
-  <label for="example-text-input-marca" class="col-2 col-addForm-label">Marca</label>
-  <div class="col-10">
-    <input class="addForm-control" type="text" value="" id="example-text-input-marca" placeholder="Digite a marca do veículo" formControlName="marca">
+  <div class="form-group">
+  <label for="example-text-input-marca">Marca</label>
+    <input class="form-control" type="text" value="" id="example-text-input-marca" placeholder="Digite a marca do veículo" formControlName="marca">
     <div *ngIf="submitted && addForm.controls.marca.errors" class="error">
       <div *ngIf="addForm.controls.marca.errors.required">Marca é um campo obrigatório</div>
     </div>
   </div>
-</div>
-<div class="addForm-group row">
-  <label for="example-text-input-modelo" class="col-2 col-addForm-label">Modelo</label>
-  <div class="col-10">
-    <input class="addForm-control" type="text" value="" id="example-text-input-modelo" placeholder="Digite o modelo do veículo" formControlName="modelo">
+
+  <div class="form-group">
+  <label for="example-text-input-modelo">Modelo</label>
+    <input class="form-control" type="text" value="" id="example-text-input-modelo" placeholder="Digite o modelo do veículo" formControlName="modelo">
     <div *ngIf="submitted && addForm.controls.modelo.errors" class="error">
       <div *ngIf="addForm.controls.modelo.errors.required">Modelo é um campo obrigatório</div>
     </div>
   </div>
-
-</div>
-<div class="addForm-group row">
-  <label for="example-text-input-ano" class="col-2 col-addForm-label">Ano</label>
-  <div class="col-10">
-    <input class="addForm-control" type="number" value="" id="example-text-input-ano" placeholder="Digite o ano do veículo" formControlName="ano">
-    <div *ngIf="submitted && addForm.controls.ano.errors" class="error">
+    <div class="form-group">
+      <label for="example-text-input-ano">Ano</label>
+      <input class="form-control" type="number" value="" id="example-text-input-ano" placeholder="Digite o ano do veículo" formControlName="ano">
+      <div *ngIf="submitted && addForm.controls.ano.errors" class="error">
       <div *ngIf="addForm.controls.ano.errors.required">Ano é um campo obrigatório</div>
     </div>
-  </div>
-</div>
-<button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
