@@ -1,8 +1,13 @@
-###Back-End/PHP - Informações do Desenvolvedor para avaliação do script desenvolvido.
+Informações do Desenvolvedor para avaliação do script desenvolvido.
 
+###Back-End/PHP
 Para realizar os testes através do postman segue o caminho do arquivo .json para importação: https://github.com/felipefariasdev/test-dev/blob/felipe-farias/api/postman/Carros.postman_collection.json 
 
 Script sql para o banco de dados: https://github.com/felipefariasdev/test-dev/blob/felipe-farias/api/database/mysql_backup/test-dev.sql
+
+###Front-End/Angular
+
+ng build: https://github.com/felipefariasdev/test-dev/blob/felipe-farias/frontend/dist
 
 Teste para desenvolvedor do Estadão
 ==============================
