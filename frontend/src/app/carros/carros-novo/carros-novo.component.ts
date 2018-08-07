@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { CarrosService } from '../carros.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { CarrosService } from '../carros.service';
 export class CarrosNovoComponent implements OnInit {
     addForm: FormGroup;
     submitted: boolean = false;
-    invalidLogin: boolean = false;
+
     constructor(private formBuilder: FormBuilder, private router: Router, private carrosService: CarrosService) { }
 
     onSubmit() {
