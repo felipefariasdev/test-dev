@@ -10,9 +10,10 @@ import { CarrosService } from '../carros.service';
 })
 export class CarrosNovoComponent implements OnInit {
     addForm: FormGroup;
-    submitted: boolean = false;
+    submitted = false;
 
-    constructor(private formBuilder: FormBuilder, private router: Router, private carrosService: CarrosService) { }
+    constructor(private formBuilder: FormBuilder, private router: Router, private carrosService: CarrosService) {
+    }
 
     onSubmit() {
 
@@ -21,24 +22,17 @@ export class CarrosNovoComponent implements OnInit {
             return;
         }
 
-        this.carrosService.salvar();
-
-        console.log('foi');
-
-        console.log('marca: ' + this.addForm.controls.marca.value);
-        console.log('modelo: ' + this.addForm.controls.modelo.value);
-        console.log('ano: ' + this.addForm.controls.ano.value);
-
-        this.router.navigate(['carros']);
+        const salvarCarro = this.carrosService.salvar(this.addForm.controls);
+        if (salvarCarro) {
+            this.router.navigate(['carros']);
+        }
     }
 
     ngOnInit() {
-
         this.addForm = this.formBuilder.group({
             marca: ['', Validators.required],
             modelo: ['', Validators.required],
             ano: ['', Validators.required]
         });
     }
-
 }
